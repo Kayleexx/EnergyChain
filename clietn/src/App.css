@@ -1,0 +1,149 @@
+/* Reset CSS */
+body, h2, h1, button, input[type="text"], input[type="number"], input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #2d6a4f, #19314e);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styles */
+.App {
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(128, 112, 112, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(68, 54, 54, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Typography Styles */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #191919; /* Text color changed */
+}
+
+/* Title Styles */
+.title {
+  font-size: 6vh;
+  margin-top: 10vh; /* Adjusted to be more centered */
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 12vh;
+  text-shadow: 2px black;
+  transition: ease 0.3s;
+}
+
+.title.hoverable:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+/* Button Styles */
+button {
+  background-color: #fc0050;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 5px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid #fc0050;
+  transform: scale(1.05);
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+  color: white;
+  padding: 17px;
+  background-color: #191919;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+/* Register as Renewable User Button Styles */
+.register-button {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Left Column for Add Energy Section */
+.input-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+/* Bottom Claim Incentive Button Styles */
+.claim-button {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+  .title {
+    font-size: 8vh;
+    margin-top: 5vh; /* Further adjusted for smaller screens */
+  }
+
+  .title h1 {
+    font-size: 6vh;
+  }
+
+  button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 6vh;
+    margin-top: 2vh; /* More centered for very small screens */
+  }
+
+  .title h1 {
+    font-size: 4vh;
+  }
+
+  button {
+    font-size: 16px; /* Slightly reduced font size */
+  }
+}

@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\MITALI AYUSH\\EnergyChain\\contracts\\EnergyTrading.sol": {
-      "lastModificationDate": 1697383498349,
-      "contentHash": "f3fc9f37d4e282ddf43544577792d77f",
+      "lastModificationDate": 1697452434412,
+      "contentHash": "de55a738e71b7d9b99600a586fae2008",
       "sourceName": "contracts/EnergyTrading.sol",
       "solcConfig": {
         "version": "0.8.1",

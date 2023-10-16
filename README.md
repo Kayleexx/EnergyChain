@@ -41,19 +41,19 @@ EnergyChain is a decentralized platform for energy trading built on blockchain t
    npm start
 
 ## Usage
-Connect your MetaMask wallet to the application.
-Register as a renewable energy user.
-Add energy to the platform by specifying the type and quantity.
-Trade energy with other users.
-Claim renewable energy incentives.
+- Connect your MetaMask wallet to the application.
+- Register as a renewable energy user.
+- Add energy to the platform by specifying the type and quantity.
+- Trade energy with other users.
+- Claim renewable energy incentives.
 
 ## Contributing
 We welcome contributions from the community. If you would like to contribute to the project, please follow these steps:
 
-Fork the project.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them.
-Push to your fork and submit a pull request.
+- Fork the project.
+- Create a new branch for your feature or bug fix.
+- Make your changes and commit them.
+- Push to your fork and submit a pull request.
 
 
 

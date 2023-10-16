@@ -1,5 +1,5 @@
 /* Reset CSS */
-body, h2, h1, button, input[type="text"], input[type="number"], input[type="checkbox"] {
+body, h2, h1, button, input[type="text"], input[type="number"], input[type="checkbox"], ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -7,13 +7,17 @@ body, h2, h1, button, input[type="text"], input[type="number"], input[type="chec
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(45deg, #2d6a4f, #19314e);
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
 }
@@ -25,9 +29,9 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  background: rgba(128, 112, 112, 0.5);
+  background: rgba(45, 38, 38, 0.5);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(68, 54, 54, 0.2);
+  box-shadow: 0 0 10px rgba(28, 21, 21, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -35,28 +39,30 @@ body {
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #191919; /* Text color changed */
+  color: #191919;
 }
 
 /* Title Styles */
 .title {
   font-size: 6vh;
-  margin-top: 10vh; /* Adjusted to be more centered */
+  margin-top: 10vh;
   text-align: center;
+  transition: ease 0.3s;
 }
 
 .title h1 {
   font-size: 12vh;
-  text-shadow: 2px black;
+  text-shadow: 2px 2px 5px black;
   transition: ease 0.3s;
 }
 
 .title.hoverable:hover {
   color: transparent;
   -webkit-text-stroke: 1px white;
+  transition: color 0.3s ease;
 }
 
-/* Button Styles */
+/* Button Styles with Animation */
 button {
   background-color: #fc0050;
   color: white;
@@ -64,8 +70,8 @@ button {
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px 5px;
   font-size: 20px;
 }
 
@@ -73,9 +79,10 @@ button:hover {
   background-color: transparent;
   border: 2px solid #fc0050;
   transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(252, 0, 80, 0.5);
 }
 
-/* Input Styles */
+/* Input Styles with Animation */
 input[type="text"],
 input[type="number"],
 input[type="checkbox"] {
@@ -86,7 +93,8 @@ input[type="checkbox"] {
   outline: none;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
 }
 
 input[type="checkbox"] {
@@ -111,6 +119,7 @@ input[type="checkbox"]:hover {
   margin-right: 20px;
 }
 
+
 /* Bottom Claim Incentive Button Styles */
 .claim-button {
   display: block;
@@ -121,7 +130,7 @@ input[type="checkbox"]:hover {
 @media (max-width: 600px) {
   .title {
     font-size: 8vh;
-    margin-top: 5vh; /* Further adjusted for smaller screens */
+    margin-top: 5vh;
   }
 
   .title h1 {
@@ -136,7 +145,7 @@ input[type="checkbox"]:hover {
 @media (max-width: 400px) {
   .title {
     font-size: 6vh;
-    margin-top: 2vh; /* More centered for very small screens */
+    margin-top: 2vh;
   }
 
   .title h1 {
@@ -144,6 +153,6 @@ input[type="checkbox"]:hover {
   }
 
   button {
-    font-size: 16px; /* Slightly reduced font size */
+    font-size: 16px;
   }
 }

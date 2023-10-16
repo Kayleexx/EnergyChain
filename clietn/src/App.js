@@ -11,14 +11,10 @@ function App() {
   const [isRenewable, setIsRenewable] = useState(false);
   const [recipientAddress, setRecipientAddress] = useState('');
   const [transferAmount, setTransferAmount] = useState(0);
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-  const contractAddress = '0x36a38514b27F0CEf2fc407f91251Cbb2Ee4CE1f8';
+  const contractAddress = '0xFcDA5d61574c6289f043522518BAa5D869b7fF59';
   const contractABI = EnergyTrade.abi;
-
-  
 
   useEffect(() => {
     async function initWeb3() {
@@ -37,7 +33,7 @@ function App() {
       }
     }
     initWeb3();
-  }, []);
+  }, []);  
 
   const handleTransaction = async (action, callback, transactionConfig) => {
     try {
@@ -55,28 +51,27 @@ function App() {
     }
   };
 
-
   const registerAsRenewableEnergyUser = async () => {
     await handleTransaction('Registering as a Renewable User', async (contract, web3, transactionConfig) => {
-      await contract.methods.registerRenewableEnergyUser().send({ from: account, ...transactionConfig });
+      await contract.methods.registerRenewableEnergyUser().send({ from: account, gas: 500000 });
     });
   };
 
   const addEnergy = async () => {
     await handleTransaction('Adding Energy', async (contract, web3, transactionConfig) => {
-      await contract.methods.addEnergy(energyType, amount, isRenewable).send({ from: account, ...transactionConfig });
+      await contract.methods.addEnergy(energyType, amount, isRenewable).send({ from: account, gas: 500000 });
     });
   };
 
   const transferEnergy = async () => {
     await handleTransaction('Transferring Energy', async (contract, web3, transactionConfig) => {
-      await contract.methods.transferEnergy(recipientAddress, transferAmount).send({ from: account, ...transactionConfig });
+      await contract.methods.transferEnergy(recipientAddress, transferAmount).send({ from: account, gas: 500000 });
     });
   };
 
   const claimIncentive = async () => {
     await handleTransaction('Claiming Incentive', async (contract, web3, transactionConfig) => {
-      await contract.methods.claimRenewableEnergyIncentive().send({ from: account, ...transactionConfig });
+      await contract.methods.claimRenewableEnergyIncentive().send({ from: account, gas: 500000 });
     });
   };
 
@@ -85,55 +80,23 @@ function App() {
       <h1 className='title hoverable'>EnergyChain</h1>
       <div>
         <h2>Connected Account: {account}</h2>
-        <p>Balance: {balance} MATIC</p>
+        <p>Balance: {balance} ETH</p>
       </div>
       <div>
-        <button onClick={() => registerAsRenewableEnergyUser()} disabled={loading}>
-          Register as Renewable User
-        </button>
-        <input
-          type="text"
-          placeholder="Energy Type"
-          value={energyType}
-          onChange={(e) => setEnergyType(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
+        <button onClick={() => registerAsRenewableEnergyUser()} disabled={loading}> Register as Renewable User </button>
+        <input type="text" placeholder="Energy Type" value={energyType} onChange={(e) => setEnergyType(e.target.value)} />
+        <input type="number" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
         <label>Renewable: </label>
-        <input
-          type="checkbox"
-          checked={isRenewable}
-          onChange={(e) => setIsRenewable(e.target.checked)}
-        />
-        <button onClick={() => addEnergy()} disabled={loading}>
-          Add Energy
-        </button>
+        <input type="checkbox" checked={isRenewable} onChange={(e) => setIsRenewable(e.target.checked)} />
+        <button onClick={() => addEnergy()} disabled={loading}> Add Energy </button>
       </div>
       <div>
-        <input
-          type="text"
-          placeholder="Recipient Address"
-          value={recipientAddress}
-          onChange={(e) => setRecipientAddress(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Amount"
-          value={transferAmount}
-          onChange={(e) => setTransferAmount(e.target.value)}
-        />
-        <button onClick={() => transferEnergy()} disabled={loading}>
-          Transfer Energy
-        </button>
+        <input type="text" placeholder="Recipient Address" value={recipientAddress} onChange={(e) => setRecipientAddress(e.target.value)} />
+        <input type="number" placeholder="Amount" value={transferAmount} onChange={(e) => setTransferAmount(e.target.value)} />
+        <button onClick={() => transferEnergy()} disabled={loading}> Transfer Energy </button>
       </div>
       <div>
-        <button onClick={() => claimIncentive()} disabled={loading}>
-          Claim Incentive
-        </button>
+        <button onClick={() => claimIncentive()} disabled={loading}> Claim Incentive </button>
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>

@@ -55,5 +55,6 @@ We welcome contributions from the community. If you would like to contribute to 
 - Make your changes and commit them.
 - Push to your fork and submit a pull request.
 
+## Output
 
-
+![image](https://github.com/Kayleexx/EnergyChain/assets/105365766/4f11b893-fcd4-42a8-aaf9-07bb0cec456d)

@@ -50,12 +50,7 @@ EnergyChain is a decentralized platform for energy trading built on blockchain t
 - Analyze the proposed algorithm with a sample dataset.
 
 ## Contributing
-We welcome contributions from the community. If you would like to contribute to the project, please follow these steps:
-
-- Fork the project.
-- Create a new branch for your feature or bug fix.
-- Make your changes and commit them.
-- Push to your fork and submit a pull request.
+We welcome contributions from the community but still this is a personal project. So, any contributions are welcome here!
 
 ## Output
 

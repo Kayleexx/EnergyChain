@@ -1,6 +1,6 @@
 # EnergyChain
 
-EnergyChain is a decentralized platform for energy trading built on blockchain technology. It allows users to register as renewable energy providers, trade energy, and claim renewable energy incentives.
+EnergyChain is a decentralized platform for energy trading built on blockchain technology. It allows users to register as renewable energy providers, trade energy, and claim renewable energy incentives. There are also various algorithms which are proposed here but they are only for analysis.
 
 
 ## Features
@@ -10,6 +10,7 @@ EnergyChain is a decentralized platform for energy trading built on blockchain t
 - Trade energy with other users.
 - Claim renewable energy incentives.
 - Built on blockchain for security and transparency.
+- Analysis of various proposed algorithms.
 
 ## Getting Started
 
@@ -46,6 +47,7 @@ EnergyChain is a decentralized platform for energy trading built on blockchain t
 - Add energy to the platform by specifying the type and quantity.
 - Trade energy with other users.
 - Claim renewable energy incentives.
+- Analyze the proposed algorithm with a sample dataset.
 
 ## Contributing
 We welcome contributions from the community. If you would like to contribute to the project, please follow these steps:
@@ -58,3 +60,11 @@ We welcome contributions from the community. If you would like to contribute to 
 ## Output
 
 ![image](https://github.com/Kayleexx/EnergyChain/assets/105365766/4f11b893-fcd4-42a8-aaf9-07bb0cec456d)
+
+![image](https://github.com/Kayleexx/EnergyChain/assets/105365766/68b26c1c-3a3c-4dd2-bfc2-a413b570f6a3)
+
+![image](https://github.com/Kayleexx/EnergyChain/assets/105365766/504580ba-73e9-42e7-9163-8fcb7a9417ce)
+
+![image](https://github.com/Kayleexx/EnergyChain/assets/105365766/b2215b87-4ffe-4c46-9b15-13fe5e1224d9)
+
+

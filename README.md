@@ -24,7 +24,7 @@ EnergyChain is a decentralized platform for energy trading built on blockchain t
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/EnergyChain.git
+   git clone https://github.com/Kayleexx/EnergyChain.git
 
 2. Navigate to the project directory:
 
